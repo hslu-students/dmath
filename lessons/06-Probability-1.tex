@@ -1,0 +1,32 @@
+\section{Diskrete Wahrscheinlichkeitsrechnung I}
+
+\subsection{Wahrscheindlichkeit nach Laplace}
+$ p(A) = \frac{|A|}{|S|} = \frac{Anzahl\ guenstige}{Anzahl\ moegliche}$
+
+\subsection{Komplement der Wahrscheindlichkeit}
+$ p(\overline{A}) = 1 - p(A) $
+
+\subsection{Additionsregel}
+$ p(A_1 \cup A_2 ) = p(A_1) + p(A_2) - p(A_1 \cap A_2) $
+
+\subsection{Bedingte Wahrscheinlichkeit}
+$ p(A|B) = \frac{p(A \cap B)}{p(B)} $
+
+\subsection{Unabhängige Ereignisse}
+$ p(A|B) = \frac{p(A \cap B)}{p(B)} = \frac{p(A) p(B)}{p(B)} = p(A) $
+
+\subsection{Satz der totalen Wahrscheindlichkeit}
+$ p(A) = \sum_{i=1}^{k} p(A \cap B_i) = \sum_{i=1}^{k} p(A|B_i) \cdot p(B_i) $
+\newline
+$ p(A|C) = \frac{1}{p(C)} \sum_{i=1}^{k} p(A \cap (B_i \cap C)) $
+\newline
+$ p(A|C)= \sum_{i=1}^{k} p(A|B_i) \cdot p(B_i|C) $
+\newline \newline
+\textit{Spezialfall für 2 Mengen:}\newline
+$ p(A) = p(A|B) \cdot p(B) + p(A|\overline{B}) \cdot p(\overline{B}) $
+
+\subsection{Satz von Bayes}
+$ p(B_j|A) = \frac{P(A|B_j)\ p(B_j)}{p(A)} = \frac{p(A|B_j)\ p(B_j)}{\sum_{i=1}^{k} p(A|B_i) \cdot p(B_i)} $
+\newline \newline
+\textit{Spezialfall für 2 Mengen:}\newline
+$ p(B|A) = \frac{P(A|B)\ p(B)}{p(A|B) \cdot p(B) + p(A|\neg{B}) \cdot p(\overline{B})} $
