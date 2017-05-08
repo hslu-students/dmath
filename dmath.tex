@@ -9,15 +9,33 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage[top=2cm,right=2cm,bottom=3cm,left=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage[lastpage,user]{zref}
+
+\newcommand{\Title}{Diskrete Mathematik}
+\newcommand{\Author}{Patrick Bucher \& Lukas Arnold}
+\newcommand{\Date}{\today}
+
+\title{\Title}
+\date{\Date}
+\author{\Author}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\Title}
+\fancyhead[R]{\Author}
+\fancyfoot[L]{DMATH}
+\fancyfoot[C]{\Date}
+\fancyfoot[R]{Seite \thepage\ von \zpageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
 
 \setlength{\columnsep}{1cm}
 
 \begin{document}
 
-\author{Patrick Bucher \& Lukas Arnold}
-\title{Diskrete Mathematik}
 \maketitle
-
+\thispagestyle{fancy}
 \tableofcontents
 
 \input{./lessons/01-Foundations.tex}
