@@ -1,0 +1,34 @@
+\subsection{Binomialverteilung}
+$ B(k|n, p) = B_{n,p}(k) = C(, k) p^k (1-p)^{n-k} $
+\newline
+$ B(k|n, p) = \binom{n}{k} p^k (1-p)^{n-k} $
+\newline
+\newline
+\textit{Bedingung:}
+\newline
+$ p = M/N $ und $ n <= M/10 <= (N - M) / 10 $
+
+\subsection{Hypergeometrische Verteilung}
+$ p(k) = \frac{\binom{M}{k} \binom{N-M}{n-k}}{\binom{N}{n}} $
+
+\subsection{Poissonverteilung}
+$ f(k) = \frac{u^k}{k!} e^{-u} $
+\newline
+\newline
+\textit{Bedingung:}
+\newline
+$ u = np $ und $ p <= 0.1, n >= 100 $
+
+\subsection{W'keitsverteilung einer Zufallsvariablen}
+$ \{ (r, p(X = r)) | \forall r \in X(S) \} $
+
+\subsection{Erwartungswert einer Zufallsvariable}
+$ E(C) = \sum_{s \in S} X(s) \cdot p(s) = \sum_{r \in X(S)} r \cdot p(X = r) $
+
+\subsection{Varianz einer Zufallsvariable}
+$ V(X) = \sum_{s \in S} (X(s) - E(X))^2 \cdot p(s) $ 
+\newline 
+ $ V(X) = \sum_{r \in X(S)} (r - E(X))^2 \cdot p(X = r) $
+
+\subsection{Standardabweichung einer Zufallsvariable}
+$ o(X) = \sqrt{V(X)} $
