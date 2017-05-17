@@ -1,0 +1,84 @@
+\section{Foundations}
+
+\subsection{Operationen}
+\begin{tabular}{lll}
+	Negation & $\neg p$ & \textit{Verneinung} \\ 
+	Konkunktion & $p \wedge q$ & \textit{Und-Verknüpfung} \\ 
+	Disjunktion & $p \vee q$ & \textit{Oder-Verknüpfung} \\
+	EXOR & $p \oplus q$ & \textit{Exklusiv-Oder} \\
+	Implikation & $p \rightarrow q$ & \textit{falls p dann q} \\
+	Bikonditional & $p \leftrightarrow q$ & \textit{p genau dann wenn q} \\
+\end{tabular} 
+
+\subsection{Prioritäten der Operationen}
+\begin{tabular}{cccccc}
+	$\neg$ & $\wedge$ & $\vee$ & $\oplus$ & $\rightarrow$ & $\leftrightarrow$ \\
+	1 & 2 & 3 & 4 & 5 & 6
+\end{tabular} 
+
+\subsection{Tautologie \& Kontraktion}
+\begin{tabular}{lll}
+	Tautologie & $p \vee \neg p$ & \textit{immer wahre Aussage} \\ 
+	Kontraktion & $p \wedge \neg q$ & \textit{immer falsche Aussage} \\ 
+\end{tabular} 
+
+\subsection{Logische Äquivalenzgesetze}
+\begin{tabular}{lll}
+	Identität & $p \wedge \textbf{T} \equiv p$ & $p \vee \textbf{F} \equiv p$ \\
+	Dominanz & $p \vee \textbf{T} \equiv \textbf{T}$ & $p \wedge \textbf{F} \equiv \textbf{F}$ \\
+	Negation & $p \vee \neg p \equiv \textbf{T}$ & $p \wedge \neg p \equiv \textbf{F}$ \\
+	Assoziativ 1 & \multicolumn{2}{l}{$(p \vee q) \vee r \equiv p \vee (q \vee r)$} \\ 
+	Assoziativ 2 & \multicolumn{2}{l}{$(p \wedge q) \wedge r \equiv p \wedge (q \wedge r)$} \\ 
+	Distributiv 1 & \multicolumn{2}{l}{$p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)$} \\ 
+	Distributiv 2 & \multicolumn{2}{l}{$p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$} \\ 
+	De Morgan’s 1 &
+	\multicolumn{2}{l}{$\neg (p \wedge q) \equiv \neg p \vee \neg q$} \\ 
+	De Morgan’s 2 & 
+	\multicolumn{2}{l}{$\neg (p \vee q) \equiv \neg p \wedge \neg q$} \\ 
+\end{tabular} 
+
+\subsection{Äquivalenzgesetze}
+\begin{tabular}{rcl}
+	$p \rightarrow q$ & $\equiv$ & $\neg p \vee q$ \\
+	$p \rightarrow q$ & $\equiv$ & $\neg q \rightarrow \neg p$ \\
+	$p \vee q$ & $\equiv$ & $\neg p \rightarrow q$ \\
+	$p \wedge q$ & $\equiv$ & $\neg (p \rightarrow \neg q)$ \\
+	$\neg (p \rightarrow q)$ & $\equiv$ & $p \wedge \neg q$ \\
+	\\
+	$p \leftrightarrow q$ & $\equiv$ & $(p \rightarrow q) \wedge (q \rightarrow p)$ \\
+	$p \leftrightarrow q$ & $\equiv$ & $\neg p \leftrightarrow \neg q$ \\
+	$p \leftrightarrow q$ & $\equiv$ & $(p \wedge q) \vee (\neg p \wedge \neg q)$ \\
+	$\neg (p \leftrightarrow q)$ & $\equiv$ & $p \leftrightarrow \neg q$ \\
+	\\
+	$p \rightarrow (q \wedge r)$ & $\equiv$ & $(p \rightarrow q) \wedge (p \rightarrow r)$ \\
+	$(p \vee q) \rightarrow r$ & $\equiv$ & $(p \rightarrow r) \wedge (q \rightarrow r)$ \\
+	$p \rightarrow (q \vee r)$ & $\equiv$ & $(p \rightarrow q) \vee (p \rightarrow r)$ \\
+	$(p \wedge q) \rightarrow r$ & $\equiv$ & $(p \rightarrow r) \vee (q \rightarrow r)$ \\
+	\\
+	$p \oplus q$ & $\equiv$ & $(p \vee q) \wedge (\neg p \vee \neg q)$ \\
+	$\neg (p \oplus q)$ & $\equiv$ & $(p \wedge q) \vee (\neg p \wedge \neg q)$ \\
+	$\neg (p \oplus q)$ & $\equiv$ & $p \leftrightarrow q$ \\
+\end{tabular}
+
+\subsection{Quantifikatoren}
+\begin{tabular}{lrl}
+	For All & $\forall$ & \textit{für alle $\textbf{x}$ aus $\textbf{P}$ wahr} \\ 
+	Exists & $\exists$ & \textit{für mindestens ein $\textbf{x}$ aus $\textbf{P}$ wahr} \\ 
+	Not Exists & $\neg \exists$ & \textit{für alle $\textbf{x}$ aus $\textbf{P}$ falsch} \\ 
+	Not For All & $\neg \forall$ & \textit{für mindestens ein $\textbf{x}$ aus $\textbf{P}$ falsch} \\ 
+\end{tabular} 
+
+\subsection{Negation von Quantifikatoren}
+\begin{tabular}{rcl}
+	$\neg \exists x P(x)$ & $\equiv$ & $\forall x \neg P(x)$ \\
+	$\neg \forall x P(x)$ & $\equiv$ & $\exists x \neg P(x)$ \\
+\end{tabular}
+
+\subsection{Beweise}
+\begin{tabular}{ll}
+	direkter Beweis & $p \rightarrow q$ \\ 
+	indirekter Beweis & $\neg q \rightarrow \neg p$ \\ 
+	Widerspruch & $\neg p \rightarrow q$ \\
+	\textit{Vorgehen Widerspruch}& $(\neg p \rightarrow \textbf{f}) \Rightarrow (p \rightarrow \textbf{w})$ \\
+\end{tabular} 
+
