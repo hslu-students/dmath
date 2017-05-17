@@ -1,0 +1,99 @@
+\section{Basic Structures}
+
+\subsection{Mengen}
+$ \mathbb{N} = \{1, 2, ... \} $ \\
+$ \mathbb{N}_0 = \{0, 1, 2, ... \} $ \\
+$ \mathbb{Z} = \{ ... , -1, 0, 1, 2, ... \} $ \\
+$ \mathbb{Z}^+ = \{1, 2, ... \} $ \\
+$ \mathbb{Q} = \{ p / q | p \in Z \land q \in N \} $ \\
+$ \mathbb{R} $ : die Menge der reellen Zahlen \\
+$ \mathbb{C} $ : die Menge der komplexen Zahlen \\
+
+\subsection{Spezielle Menegen}
+\begin{tabular}{ll}
+    Teilmenge: & $ A \subset B \equiv \forall x (x \in A \rightarrow x \in B) $ \\
+    Leere Menge: & $ \emptyset \subset A $ \textit{gilt für jede Menge A} \\
+    Kardinalität: & $ |S| $ \textit{beschreibt Anzahl Elmenete von A} \\
+    Potenzmenge: & $ P(S) = 2^S = \{ \emptyset , \{1\} , \{2\} , \{1, 2\} \} $ \\
+    Kreuzprodukt: & $A \times B = \{(a, b) |a \in A \land b \in B \} $ \\
+\end{tabular} 
+
+\subsection{Mengenoperationen}
+\begin{tabular}{ll}
+    Komplement: & $ A^c = \overline{A} = \{ m \in M : m \notin A \} $ \\
+    Durchschnitt: & $ A \cap B = \{ m \in M | m \in A \land m \in B \} $ \\
+    Vereinigung: & $ A \cup B = \{ m \in M | m \in A \lor m \in B \} $ \\
+    Differenz: & $ B - A = \{ m \in M | m \in B \land m \notin A \} $
+\end{tabular} 
+
+\subsection{Rechenregeln für Mengen}
+\begin{tabular}{ll}
+    Kommutativgesetz & $ A \cup B = B \cup A $ \\
+    Kommutativgesetz & $ A \cap B = B \cap A $ \\
+    Assoziativgesetz & $ A \cup (B \cup C) = (A \cup B ) \cup C $ \\
+    Assoziativgesetz & $ A \cap (B \cap C) = (A \cap B ) \cap C $ \\
+    Distributivgesetz & $ A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $ \\
+    Distributivgesetz & $ A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $ \\
+    De Morgan’s Gesetz & $ \overline{A \cup B} = \overline{A} \cap \overline{B} $ \\
+    De Morgan’s Gesetz & $ \overline{A \cap B} = \overline{A} \cup \overline{B} $ \\
+\end{tabular} 
+
+\subsection{Definition von Fuktionen}
+\begin{tabular}{lll}
+    $ f : X \rightarrow Y $ & $ x \mapsto f(x) $ & $ f : x \mapsto f(x) $ \\
+\end{tabular} 
+
+$ 
+    f(x) := \left\{\
+    \begin{array}{ll}
+        5 & $ für $x$ < 0 $\\
+        x^2 + 5 & $ für $x \in [0,2] \\
+        0.5x + 8 & $ für $x$ > 2 $ \\
+    \end{array}\right\}
+$
+
+\subsection{Arten von Funktionen}
+\begin{tabular}{ll}
+    injektiv & \textit{auf jedes Element in Y zeigt höchstens ein Pfeil} \\
+    surjektiv & \textit{auf jedes Element in Y zeigt mindestens ein Pfeil} \\
+    bijektiv & \textit{auf jedes Element in Y zeigt genau ein Pfeil} \\
+\end{tabular} 
+
+\subsection{Zusammengesetzte Funktion}
+\begin{tabular}{ll}
+    $ g : X \rightarrow U $ & $ x \mapsto g(x) $ \\
+    $ f : U \rightarrow Y $ & $ u \mapsto g(u) $ \\
+    $ F = f \circ g : X \rightarrow Y $ & $ x \mapsto f(g(x)) $ \\
+\end{tabular} 
+
+\subsection{Umkehrfunktion}
+\begin{tabular}{ll}
+    $ y = f(x) $ & $ x = f^{-1}(y) $ \\
+    & \\
+    \multicolumn{2}{l}{$ (f^{-1} \circ f)(x) = f^{-1}(f(x)) = x $} \\
+    \multicolumn{2}{l}{$ (f^{-1} \circ f)(y) = f^{-1}(f(y)) = y $} \\
+\end{tabular} 
+
+\subsection{Folgen}
+\begin{tabular}{ll}
+    harmonisch & $ a_k = 1 / k $ \\
+    geometrisch & $ a_k = a_0 * q^k $ \\
+    arithmetisch & $ a_k = a_0 + (k*d) $ \\
+\end{tabular} 
+
+\subsection{Reihen}
+\begin{tabular}{ll}
+    harmonisch & $ \sum_{k=1}^n 1 / k $ \\
+    geometrisch & $ a_0 * \sum_{k=0}^{n-1} q^k = a_0 \frac{q^n - 1}{q - 1}$ \\
+    arithmetisch & $ \sum_{k=0}^{n-1} (a_0 + kd) = n \frac{a_0 + a_{n-1}}{2}$ \\
+\end{tabular} 
+
+\subsection{Summenformeln}
+\begin{tabular}{ll}
+    $ \sum_{k=1}^n k $ & $ \frac{n * (n+1)}{2} $ \\
+    $ \sum_{k=1}^n k^2 $ & $ \frac{n(n + 1)(2n + 1)}{6} $ \\
+    $ \sum_{k=1}^n k^3 $ & $ \frac{n^2(n+1)^2}{4} $ \\
+    $ \sum_{k=0}^n x^k, |x| < 1 $ & $\frac{1}{1 -x} $ \\
+    $ \sum_{k=1}^n kx^{k-1}, |x| < 1 $ & $ \frac{1}{(1-x)^2} $ \\
+\end{tabular} 
+
