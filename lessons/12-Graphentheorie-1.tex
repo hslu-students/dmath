@@ -1,3 +1,61 @@
 \section{Graphentheorie 1}
 
-TODO: Pädu
+\subsection{(Ecken)grade}
+
+Eckengrad: $ sum_{v \in V} deg(v) = 2 \cdot |E| $
+\\
+Maximalgrad: $ \Delta(G) = max_{v \in V(G)} {deg}(v) $
+\\
+Maximalgrad: $ \delta(G) = min_{v \in V(G)} {deg}(v) $
+
+\subsection{Wichtige Graphen}
+
+Vollständiger Graph $K_n$ mit $n$ Knoten: genau eine Kante zwischen je zwei Knoten ($m$ Kanten).
+\\
+$ m = {{n}\choose{2}} = {{(n-1)n}\over{2}} $ 
+
+\subsection{Baum}
+
+Baum mit $n$ Knoten: $n-1$ Kanten.
+\\
+Baum mit $i$ inneren Knoten: $n=m \cdot i + 1$ Knoten
+\\
+$m$-facher Baum der Höhe $h$: höchstens $m^h$ Blätter.
+
+\subsection{Page-Rank-Algorithmus}
+
+Gewicht der Seite $PR_i$ in einem Netz mit $N$ Seiten, Dämpfungsfaktor $d$ ($[0;1]$), $C_j$ von Seite $j$ abgehende Links:
+\\
+$PR_i = {1-d}\over{n} + d \cdot \sum_{j} {PR_j}/C_j$
+
+\subsection{Matrizen}
+
+$n$ Ecken, $m$ Kanten
+\\
+Adjazenzmatrix $A(G)$: $n \times n$-Matrix (Knoten/Knoten) mit Anzahl Kanten zwischen den Ecken.
+\\
+Inzidenzmatrix $B(G)$: $n \times m$-Matrix (Knoten/Kanten) mit $1$ (Knoten liegt auf Kante) oder $0$ (Knoten \textit{nicht} auf Kante)
+\\
+Gradmatrix $D(G)$: $n \times n$-Diagonal-Matrix (Knoten/Knoten), Grade der Knoten auf der Diagonalen
+
+\subsection{Wege und Kreise}
+
+Weg: Folge von Kanten $e_1={a,b},e_2={b,c},\dots$
+\\
+Kreis: Weg mit übereinstimmendem Anfangs- und Endpunkt (Länge $>0$)
+\\
+einfacher Kreis: jede Kante kommt höchstens einmal vor
+
+TODO: p.49/62
+
+Eulerweg: Weg, der jede Kante einmal durchläuft
+\\
+Eulerkreis: Kreis, der jede Kante einmal durchläuft
+\\
+Hamiltonweg: Weg, der jeden Knoten einmal durchläuft
+\\
+Hamiltonkreis: Kreis, der jeden Knoten einmal durchläuft
+\\
+Satz von Dirac: ein Graph mit $n \geq 3$ Knoten mit Grad $\geq n/2$ hat einen Hamiltonkreis.
+\\
+Satz von Ore: TODO p. 62
