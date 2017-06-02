@@ -1,0 +1,25 @@
+\section{Zahlentheorie}
+
+\subsection{Division mit Rest}
+$ A = q * n + r$ wobei $ 0 \leq r < |n|$
+
+\subsection{Kongruenz modulo n}
+\begin{tabular}{lll}
+    $ a \equiv b (mod n)$ & $\iff$ & $n|(a - b)$ \\
+    & $\iff$ & $\exists q : a-b = q * n$ \\
+    & $\iff$ & $\exists q : a = b + q * n$ \\
+\end{tabular}
+
+\subsection{Euklidsche Algorithmus}
+\begin{tabular}{rcrcrcr}
+    963 & = & 4 & * & 218 & + & 91 \\
+    218 & = & 2 & * & 91 & + & 36 \\
+    91 & = & 2 & * & 36 & + & 19 \\
+    36 & = & 1 & * & 19 & + & 17 \\
+    19 & = & 1 & * & 17 & + & 2 \\
+    17 & = & 8 & * & 2 & + & 1 \\
+    8 & = & 2 & * & 1 & + & 0 \\
+\end{tabular}
+
+\subsection{Diophantischer Gleichung}
+$n_1 * x + n_2 * y = n$
