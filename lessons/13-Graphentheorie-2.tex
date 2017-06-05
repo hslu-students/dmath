@@ -1,3 +1,46 @@
 \section{Graphentheorie 2}
 
-TODO: Pädu
+\subsection{Satz von Euler}
+
+Für ein zusammenhängender, planarer Graph $G$ mit $|V|$ Knoten, $|E|$ Kanten und $|R|$ Regionen gilt:
+\\
+$2 = |V| - |E| + |R|$
+
+\subsection{Satz von Kuratovsky}
+
+Ein Graph ist genau dann nicht planar, wenn er einen Untergraphen vom Typ $K_{3,3}$ oder $K_5$ enthält.
+
+\subsection{Färbungen}
+
+Anzahl mögliche Färbungen des Graphen $G$ mit $x$ Farben: $P(G,x)$
+
+\begin{itemize}
+    \item{Graph $G$ mit $n$ Knoten und leerer Kantenmenge: $P(G,x)=x^n$}
+    \item{Vollständiger Graph $G$ mit $n$ Knoten: $P(K_n,x)=x \cdot (x-1) \cdot (x-2) \cdots (x-n+1)$}
+    \item{Baum mit $n$ Knoten: $P(T_n,x)=x \cdot (x-1)^{n-1}$}
+\end{itemize}
+
+\subsection{Dekompositionsgleichung}
+
+Graph $G = (V,E)$ mit Kante $e={a,b}$
+
+\begin{itemize}
+    \item{$G-e$: Graph $G$ unter Weglassung der Kante $e$}
+    \item{$G_e$: Graph $G$ mit zusammengezogener Kante $e$ unter Weglassung aller parallelen Kanten}
+    \item{Anzahl Färbungen von $G$ mit $x$ Farben: $P(G,x)=P(G-e,x)-P(G_e,x)$}
+    \item{Ziel: Rückführung des Graphen $G$ auf Bäume ($T$) und vollständige Graphen ($K$) mit errechenbarer Anzahl von Färbungen}
+\end{itemize}
+
+Chromatische Zahl eines Graphen: $\chi(G) = {min}\{x \in \mathbb{N} : P(G,x) > 0\}$ (das kleinste $x$, wofür das chromatische Polynom $P$ eine positive Zahl liefert)
+
+\subsection{Gerüste}
+
+\begin{itemize}
+    \item{Gerüst oder Spannbaum eines Graphen $G=(V,E)$: zusammenhängender, kreisfreier Unterbaum, der alle Knoten aus $V$ enthält.}
+    \item{Baum: 1 Gerüst}
+    \item{Kreis mit $n$ Kanten: je ein Gerüst durch Entfernung einer Kante ($n$ Gerüste)}
+    \item{$G-e$: Graph $G$ unter Weglassung der Kante $e$}
+    \item{$G/e$: Graph $g$ unter Zusammenziehung der Kante $e$ und Weglassen aller Schlingen}
+    \item{Anzahl der Gerüste des Graphen $G$: $t(G)=t(G-e)+t(G/e)$}
+    \item{Ziel: Rückführung des Graphen $G$ auf Kreise und Bäume mit bekannter/errechenbarer Anzahl Gerüste}
+\end{itemize}
