@@ -1,0 +1,49 @@
+\subsection{Restklassen}
+$ [r] = \{x \in Z | x \equiv r \mod n\} $
+
+\subsection{Rechenregeln für modularen Rechnen}
+\begin{tabular}{l}
+    $a \oplus_n b = b \oplus_n a = a + b \mod n = R_n(a + b) $ \\
+    $a \odot_n b = b \odot_n a = a * b \mod n = R_n(a * b)$ \\
+    $a \odot_n (b \oplus_n c) = (a \odot_n b) \oplus_n (a \odot_n c)$ \\
+\end{tabular} \newline
+
+\subsection{Potenzieren modulo n}
+$ x^m = x^{2 * k + l} = x^{2 + k} * x^l = (x^k)^2 * x^l $
+
+\subsection{Square and Multiply Algorithm}
+\begin{tabular}{rl}
+    1. & Exponent binär schreiben \\
+    2. & Q bedeutet quadrieren und M multiplizieren \\
+    3. & Ersetze 1 durch QM und 0 durch Q \\
+    4. & das erste (links) QM streichen \\
+    5. & Reihenfolge von Quadrieren und Multipliziere \\
+    6. & Exponent einsetzten \\
+    7. & entsprechend Quadrieren und Multiplizieren \\
+    8. & immer wieder modular reduzieren \\
+\end{tabular}
+
+\subsection{Nullteiler}
+$ a \in \mathbb{Z}_n, a \neq 0, b \in \mathbb{Z}_n, b \neq 0 $ \\
+falls $ a \odot_n b = 0 $, dann ist $a$ Nullteiler von $\mathbb{Z}_n$
+
+\subsection{Inverse Elemente}
+$ \mathbb{Z}_n^* = \{ a \in \mathbb{Z}_n | ggT(a, n) = 1 \} $ \\
+$ a^{-1} = R_p(a^{p-2}) = a^{p-2} \mod p $, ($p$ = Primzahl)
+
+\subsection{Primitive Elemente / Erzeugende}
+falls jedes Element $a \in \mathbb{Z}_p^* $ eine Potent von $z$ ist
+
+\subsection{Einwegfunktionen}
+\begin{tabular}{ll}
+    Quadrieren modulo n & $ x \mapsto x^2 \mod n$ \\
+    Potenzieren modulo n & $ x \mapsto x^e \mod n$ \\
+    Exponentialfunktion modulo p & $ x \mapsto b^x \mod p$ \\
+\end{tabular}
+
+\subsection{Modulare Quadratwurzeln}
+$ \sqrt{a} \mod n = \{ x \in \mathbb{Z}_n^* | x^2 = a \mod n \} $ \\
+=> Für ein $a$ kann es mehrere Quadratwurzeln geben
+
+\subsection{diskrete Logarithmus}
+exp$_b(k) = b^k \mod p$
