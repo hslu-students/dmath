@@ -1,0 +1,29 @@
+\section{Reasoning}
+
+\subsection{Induktionsbeweis}
+
+\begin{itemize}
+    \item{Induktionshypothese: $P(k)$}
+    \item{Induktionsverankerung: $P(1)$}
+    \item{Induktionsschritt: $P(k) \to P(k+1)$}
+    \item{$[P(1) \land \forall k (P(k) \to P(k+1))] \to \forall n P(n)$}
+    \item{Wenn die Induktionsverankerung und für alle $k$ der Induktionsschritt stimmt, dann gilt die Hypothese für alle Zahlen $n$.}
+\end{itemize}
+
+\subsection{Schlussregeln}
+
+Modus ponens: $((p \to q) \land p) \to q$ (Abtrennungsregel)
+\\
+Modus tollens: $((\neg q \land (p \to q))) \to \neg p$ (aufhebender Modus)
+\\
+Hypothetischer Syllogismus: $((p \to q) \land (q \to r)) \to (p \to r)$ (Kettenschluss)
+\\
+Disjunktiver Syllogismus: $((p \lor q) \land \neg p) \to q$
+\\
+Addition: $p \to (p \lor q)$
+\\
+Simplifikation: $(p \land q) \to p$
+\\
+Konjunktion: $((p) \land (q)) \to p \land q$
+\\
+Resolution: $((p \land q) \land (\neg p \lor r)) \to (q \lor r)$
