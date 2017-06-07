@@ -56,3 +56,62 @@ $ \pi (x) \approx \frac{x}{ln(x)} $
 
 \subsection{Kongruenz}
 $ a \equiv b $ mod $ m $, $ m|(a - b) $ 
+
+\subsection{Addition zweier Matrizen}
+$ A + B = 
+\begin{bmatrix}
+    a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n} \\
+    a_{21} + b_{21} & a_{22} + b_{22} & \cdots & a_{2n} + b_{2n} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn} 
+\end{bmatrix}$
+
+\subsection{Multiplikation einer Matrix mit einer Zahl}
+$ \alpha A = 
+\begin{bmatrix}
+    \alpha a_{11} & \alpha a_{12} & \cdots & \alpha a_{1n} \\
+    \alpha a_{21} & \alpha a_{22} & \cdots & \alpha a_{2n} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    \alpha a_{m1} & \alpha a_{m2} & \cdots & \alpha a_{mn} 
+\end{bmatrix}$
+
+\subsection{Multiplikation von Matrizen}
+\begin{tabular}{cc}
+    $A \times B = C $ &
+    $\begin{bmatrix}
+        b_{11} & \cdots & b_{1n} \\
+        \vdots & \ddots & \vdots  \\
+        b_{m1} & \cdots & b_{mn} 
+    \end{bmatrix}$ \\
+    & \\
+    $\begin{bmatrix}
+        a_{11} & \cdots & a_{1n} \\
+        \vdots & \ddots & \vdots  \\
+        a_{m1} & \cdots & a_{mn} 
+    \end{bmatrix}$ & 
+    $\begin{bmatrix}
+        c_{11} & \cdots & c_{1n} \\
+        \vdots & \ddots & \vdots  \\
+        c_{m1} & \cdots & c_{mn} 
+    \end{bmatrix}$ \\
+\end{tabular} \\ \\
+
+$c_{11} = (a_{11} * b_{11}) + (a_{12} * b_{21}) + \dots + (a_{1n} * b_{m1}) $
+
+\subsection{Transponierte Matrix}
+$A^T$ durch Vertauschen von Zeilen und Spalten
+
+\subsection{Symmetrie einer Matrix}
+ist symmetrisch, falls $A^T = A$ \\
+ist antisymmetrisch, falls $A^T = -A$
+
+\subsection{Einheitsmatrix}
+$I_n$ ist eine Matrix bei der alle Elemente auf der Diagonalen Eins und alle anderen Null sind
+
+\subsection{Inverse Matrix}
+$A^{-1} * A = A * A^{-1} = I_n$
+
+\subsection{Boolsches Produkt zweier Matrizen}
+$ A \odot B = [c_{ij}] $, \\
+wobei $c_{ij} = (a_{i1} \land b_{1j}) \lor (a_{i2} \land b_{2j}) \lor \dots \lor (a_{in} \land b_{nj}) $
+
