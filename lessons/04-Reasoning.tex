@@ -1,29 +1,32 @@
 \section{Reasoning}
 
+\subsection{Beweismethoden}
+\begin{tabular}{ll}
+    Direkter Beweis & $ p \rightarrow q $ \\
+    Beweis durch Kontraposition & $ \neg q \rightarrow \neg p $ \\
+    Beweis durch Widerspruch & $ \neg p \rightarrow q $ \\
+\end{tabular}
+
 \subsection{Induktionsbeweis}
+\begin{tabular}{ll}
+    Induktionshypothese & $P(k)$ \\
+    Induktionsverankerung & $P(1)$ \\
+    Induktionsschritt & $P(k) \to P(k+1)$ \\
+\end{tabular} \\
 
-\begin{itemize}
-    \item{Induktionshypothese: $P(k)$}
-    \item{Induktionsverankerung: $P(1)$}
-    \item{Induktionsschritt: $P(k) \to P(k+1)$}
-    \item{$[P(1) \land \forall k (P(k) \to P(k+1))] \to \forall n P(n)$}
-    \item{Wenn die Induktionsverankerung und für alle $k$ der Induktionsschritt stimmt, dann gilt die Hypothese für alle Zahlen $n$.}
-\end{itemize}
+$[P(1) \land \forall k (P(k) \to P(k+1))] \to \forall n P(n)$
 
-\subsection{Schlussregeln}
+\subsection{Schlussregeln / Inferenzregeln}
+\begin{tabular}{ll}
+    Modus ponens & $((p \to q) \land p) \to q$ \\
+    Modus tollens & $((\neg q \land (p \to q))) \to \neg p$ \\
+    Hypothetischer & \multirow{2}{*}{$((p \to q) \land (q \to r)) \to (p \to r)$} \\ 
+    Syllogismus & \\
+    Disjunktiver & \multirow{2}{*}{$((p \lor q) \land \neg p) \to q$} \\
+    Syllogismus & \\
+    Addition & $p \to (p \lor q)$ \\
+    Simplifikation & $(p \land q) \to p$ \\
+    Konjunktion & $((p) \land (q)) \to p \land q$ \\
+    Resolution & $((p \land q) \land (\neg p \lor r)) \to (q \lor r)$ \\
+\end{tabular} \\
 
-Modus ponens: $((p \to q) \land p) \to q$ (Abtrennungsregel)
-\\
-Modus tollens: $((\neg q \land (p \to q))) \to \neg p$ (aufhebender Modus)
-\\
-Hypothetischer Syllogismus: $((p \to q) \land (q \to r)) \to (p \to r)$ (Kettenschluss)
-\\
-Disjunktiver Syllogismus: $((p \lor q) \land \neg p) \to q$
-\\
-Addition: $p \to (p \lor q)$
-\\
-Simplifikation: $(p \land q) \to p$
-\\
-Konjunktion: $((p) \land (q)) \to p \land q$
-\\
-Resolution: $((p \land q) \land (\neg p \lor r)) \to (q \lor r)$
