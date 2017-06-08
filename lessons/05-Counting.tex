@@ -1,0 +1,51 @@
+\section{Counting}
+
+\subsection{Produktregel}
+$ | A_1 \times A_2 \times \dots \times A_n | = |A_1| * |A_2| * \dots * |A_n| $
+
+\subsection{Summenregel}
+$ | A_1 \cup A_2 \cup \dots \cup A_n | = |A_1| + |A_2| + \dots + |A_n| $
+
+\subsection{Einschluss-/Ausschlussprinzip}
+\textit{für 2 Mengen:} \\
+$ | A \cup B | = |A| + |B| - |A \cap B| $ \\
+\newline
+\textit{für 3 Mengen:} \\
+$ | A \cup B \cup C | = |A| + |B| + |C| \\ - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$
+
+\subsection{Verallgemeinertes Schubfachprinzip}
+Falls man $N$ Objekte auf $k$ Schubfächer verteilt, dann gibt es wenigstens ein Schubfach, 
+welches mindestens $\lceil N/k \rceil$ Objekte enthält
+
+\subsection{Permutationen}
+geordnete Anordnung von $r$ der $n$ Elemente
+
+\subsection{Anzahl Permutationen}
+\begin{tabular}{lll}
+    Bedingung & $0 \leq r \leq n \in \mathbb{N} $ \\
+    ohne Wiederholung & $P(n,r) = \frac{n!}{(n-r)!}$ \\
+    mit Wiederholung & $P(n,r) = n^r$ \\
+\end{tabular}
+
+\subsection{Kombinationen}
+ungeordnete Auswahl von $r$ dieser $n$ Elemente
+
+
+\subsection{Anzahl Kombinationen}
+\begin{tabular}{lll}
+    Bedingung & $0 \leq r \leq n \in \mathbb{N} $ \\
+    ohne Wiederholung & $C(n,r) = \frac{n!}{r!(n-r)!} = \binom{n}{r}$ \\
+    mit Wiederholung & $C(n,r) = \frac{n!}{r!(n-r)!} = \binom{n+r-1}{r}$ \\
+\end{tabular}
+
+\subsection{Binomialkoeffizienten}
+$ \binom{\alpha}{k} = \frac{\alpha * (\alpha - 1) * \dots * (\alpha - k + 1)}{k!} $ \\
+$ C(n,k) = \binom{n}{k} = \binom{n}{n-k} = C(n, n-k)$
+
+\subsection{Binomialsatz}
+$ (x + y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^k $ \\
+$ \sum_{k=0}^n \binom{n}{k} = 2^n $ \\
+$ \sum_{k=0}^n (-1)^k \binom{n}{k} = 0 $ \\
+$ \sum_{k=0}^n 2^k \binom{n}{k} = 3^n $ \\
+$ \sum_{k=0}^n \binom{r}{k} \binom{s}{n-k} = \binom{r + s}{n} $ \\
+
