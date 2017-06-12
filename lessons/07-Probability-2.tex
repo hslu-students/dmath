@@ -1,5 +1,5 @@
 \subsection{Binomialverteilung}
-$ B(k|n, p) = B_{n,p}(k) = C(, k) p^k (1-p)^{n-k} $
+$ B(k|n, p) = B_{n,p}(k) = C(n, k) p^k (1-p)^{n-k} $
 \newline
 $ B(k|n, p) = \binom{n}{k} p^k (1-p)^{n-k} $
 \newline
@@ -24,6 +24,10 @@ $ \{ (r, p(X = r)) | \forall r \in X(S) \} $
 
 \subsection{Erwartungswert einer Zufallsvariable}
 $ E(C) = \sum_{s \in S} X(s) \cdot p(s) = \sum_{r \in X(S)} r \cdot p(X = r) $
+
+\subsection{Unabhängigkeit von Zufallsvariablen}
+$\forall r_1 \in \mathbb{R} $ und $ \forall r_2 \in \mathbb{R} $ gilt $p(X(s) = r_1 \land Y(s) = r_2) $ \newline
+$ = p(X(s) = r_1) * p(Y(s) = r_2) $
 
 \subsection{Varianz einer Zufallsvariable}
 $ V(X) = \sum_{s \in S} (X(s) - E(X))^2 \cdot p(s) $ 
