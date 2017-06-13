@@ -1,7 +1,7 @@
 \subsection{Restklassen}
 $ [r] = \{x \in Z | x \equiv r \mod n\} $
 
-\subsection{Rechenregeln für modularen Rechnen}
+\subsection{Rechenregeln für das modulare Rechnen}
 \begin{tabular}{l}
     $a \oplus_n b = b \oplus_n a = a + b \mod n = R_n(a + b) $ \\
     $a \odot_n b = b \odot_n a = a * b \mod n = R_n(a * b)$ \\
@@ -9,7 +9,7 @@ $ [r] = \{x \in Z | x \equiv r \mod n\} $
 \end{tabular} \newline
 
 \subsection{Potenzieren modulo n}
-$ x^m = x^{2 * k + l} = x^{2 + k} * x^l = (x^k)^2 * x^l $
+$ x^m = x^{2 * k + l} = x^{2 * k} * x^l = (x^k)^2 * x^l $
 
 \subsection{Square and Multiply Algorithm}
 \begin{tabular}{rl}
@@ -39,7 +39,9 @@ falls jedes Element $a \in \mathbb{Z}_p^* $ eine Potent von $z$ ist
     Quadrieren modulo n & $ x \mapsto x^2 \mod n$ \\
     Potenzieren modulo n & $ x \mapsto x^e \mod n$ \\
     Exponentialfunktion modulo p & $ x \mapsto b^x \mod p$ \\
-\end{tabular}
+\end{tabular} \\
+
+$ n = pq $ \textit{(Multiplikation zweier Primzahlen)}
 
 \subsection{Modulare Quadratwurzeln}
 $ \sqrt{a} \mod n = \{ x \in \mathbb{Z}_n^* | x^2 = a \mod n \} $ \\
@@ -47,3 +49,17 @@ $ \sqrt{a} \mod n = \{ x \in \mathbb{Z}_n^* | x^2 = a \mod n \} $ \\
 
 \subsection{diskrete Logarithmus}
 exp$_b(k) = b^k \mod p$
+
+\subsection{Diffie-Hellmann Schlüsselvereinbarung}
+\begin{tabular}{ll}
+    1. & Wähle zwei natürliche Zahlen $p$ und $s$ \\
+    2. & $A$ wählt eine Zufallszahl $a < p$ \\
+    & $A$ berechnet $\alpha = s^a \mod p$ \\
+    & $A$ sendet $\alpha$ über einen Kanal an $B$ \\
+    3. & $B$ wählt eine Zufallszahl $b < p$ \\
+    & $B$ berechnet $\beta = s^b \mod p$ \\
+    & $B$ sendet $\beta$ über einen Kanal an $A$ \\
+    4. & $A$ berechnet $\beta ^a \mod p = s^{b*a} \mod p$ \\
+    5. & $B$ berechnet $\alpha ^b \mod p = s^{b*a} \mod p$ \\
+    6. & Beide haben den gemeinsamen Schlüssel  \\
+\end{tabular} \\
