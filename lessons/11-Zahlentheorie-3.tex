@@ -1,0 +1,17 @@
+\subsection{Symmetrische Verschlüsselung}
+Verschlüsselungsfunktion $f$, Schlüssel $k$, Klartext $m$, \\
+Geheimtext $c$, Entschlüsselungsfunktion $f^*$ \\
+\\
+$ m \mapsto c = f(k,m) $ und $ c \mapsto m = f^*(k,c) $ \\
+\textit{Bedingung:} $ f^* (k, f(k, m)) = m $
+
+\subsection{Asymmetrische Verschlüsselung}
+privater Schlüssel $d = d_T$, öffentlicher Schlüssel $e = e_T$, \\
+Klartext $m$, Geheimtext $c$ \\
+\\
+$ m \mapsto c = f_e(m) $ und $ c \mapsto m' = f_d(c) $ \\
+\textit{Bedingung:} $ m' = f_d(c) = f_d(f_e(m)) = m $
+
+\subsection{Satz von Euler}
+$ m^{k \phi (n) + 1} \mod n = m^{k(p-1)(q-1) + 1} \mod n = m $
+
