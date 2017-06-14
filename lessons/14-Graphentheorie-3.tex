@@ -1,0 +1,65 @@
+\subsection{Gewichtete Graphen}
+$ w : E \rightarrow ( 0, \infty) $ \\
+
+\textit{Länge / Gewicht eines Weges:} \\
+$w(u_0, u_1, \dots, u_n) = w(u_0, u_1) + \dots + w(u_{n-1}, u_n) $ \\
+
+\textit{Abstand $d(u,v)$:} \\
+Minimum der Längen aller Wege von $u$ nach $v$
+
+\subsection{Minimale aufspannende Bäume}
+Bedingung: $T \subseteq E $ \\
+\\
+$ w(T) = \sum_{\{u,v\} \in T} w(u,v) $
+
+\subsection{Algorithmus von Dijkstra}
+Länge des kürzeseten Weges von $a$ nach $u$ für jeden Knoten $u$ aus $V$ \\
+
+\begin{tabular}{@{}lll}
+    $ S := \emptyset $ & $ L(a) := 0$ & $L(u) := \infty $ \\
+\end{tabular}\\
+
+\textit{Wiederhole:}\\
+\begin{tabular}{@{}ll}
+    1. & Wähle einen Knoten $s \in V - S$ mit minimalem $L(s)$ \\
+    2. & Falls $L(s) = \infty$, dann HALT \\
+    3. & Füge der Menge $S$ den Knoten $s$ hinzu \\
+    4. & Falls $S = V$, dann HALT \\
+    5. & Für jeden Nachbarn $y \in V - S$ des Knoten $s$: \\
+    & Falls $L(y) > L(s) + w(s, y)$, ersetze $L(y)$ durch \\ 
+    & $L(s) + w(s, y)$; andernfalls tue nichts \\
+\end{tabular}        
+
+\subsection{Algorithmus von Prim}
+minimalen aufspannenden Baum $T$ von $G$ \\
+
+\begin{tabular}{@{}ll}
+    $S := \{ a \} $ & $ T := \emptyset $ \\
+\end{tabular}\\
+
+\textit{Wiederhole so lange wie möglich:}\\
+\begin{tabular}{@{}ll}
+    1. & Wähle eine Kante $\{x, y\} \in E$ minimalen Gewichts \\ 
+    & mit $x \in S$ und $y \in V - S$ \\
+    2. & Füge der Menge $S$ den Knoten $y$ hinzu \\
+    3. & Füge der Menge $T$ die Kante $\{x, y\}$ hinzu \\
+\end{tabular}
+
+\subsection{Algorithmus von Kruskal}
+berechnet einen minimalen aufspannenden
+Wald $T$ und die Menge $R$ der Zusammenhangskomponenten
+
+\begin{tabular}{@{}ll}
+    $R := \{ \{x\} | x \in V \} $ & $ T := \emptyset $ \\
+\end{tabular}\\
+
+\textit{Wiederhole so lange wie möglich:}\\
+\begin{tabular}{@{}ll}
+    1. & Wähle eine Kante $\{x, y\} \in E - T$ minimalen \\ 
+    & Gewichts, so dass $x$ und $y$ nicht zur gleichen \\
+    & Klasse von $R$ gehören \\
+    2. & Ersetze in $R$ die beiden Klassen von $x$ und $y$ \\
+    & durch ihre Vereinigung.\\
+    3. & Füge der Menge $T$ die Kante $\{x, y\}$ hinzu\\
+\end{tabular}
+
