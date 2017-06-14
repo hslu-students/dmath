@@ -1,55 +1,79 @@
 \section{Graphentheorie 1}
 
-\subsection{(Ecken)grade}
+\subsection{Grade}
+\begin{tabular}{@{}ll}
+    Eckengrad & $ \sum_{v \in V} \deg(v) = 2 * |E| $ \\
+    Maximalgrad & $ \Delta(G) = \max_{v \in V(G)} {\deg}(v) $ \\
+    Maximalgrad & $ \delta(G) = \min_{v \in V(G)} {\deg}(v) $ \\
+    & \\
+    \textit{Spezielle Ecken:} & \\
+    isolierte Ecke & $ \deg(v) = 0 $ \\
+    Endecke & $ \deg(v) = 1 $ \\
+\end{tabular}
 
-Eckengrad: $ sum_{v \in V} deg(v) = 2 \cdot |E| $
-\\
-Maximalgrad: $ \Delta(G) = max_{v \in V(G)} {deg}(v) $
-\\
-Maximalgrad: $ \delta(G) = min_{v \in V(G)} {deg}(v) $
+\subsection{Isomorphe Graphen}
+isomorph, falls es eine Bijektion $ f : V \rightarrow V'$ \\
+$ \{ u, v \} \in E \Leftrightarrow \{f(u), f(v)\} \in E' $
 
-\subsection{Wichtige Graphen}
-
-Vollständiger Graph $K_n$ mit $n$ Knoten: genau eine Kante zwischen je zwei Knoten ($m$ Kanten).
+\subsection{Vollständiger Graph}
+Vollständiger Graph mit $n$ Knoten: genau eine Kante zwischen je zwei Knoten ($m$ Kanten). \\
 \\
-$ m = {{n}\choose{2}} = {{(n-1)n}\over{2}} $ 
+$ m = \binom{n}{2} = \frac{(n-1)n}{2} $ 
 
-\subsection{Baum}
+\subsection{Eigenschaften eines Baumes}
+\begin{tabular}{@{}ll}
+    Baum mit $n$ Knoten & $n-1$ Kanten \\
+    Baum mit $i$ inneren Knoten & $n=m \cdot i + 1$ Knoten \\
+    $m$-facher Baum der Höhe $h$ & höchstens $m^h$ Blätter \\
+\end{tabular}
 
-Baum mit $n$ Knoten: $n-1$ Kanten.
+\subsection{Vollständige bipartite Graphen}
+Bedingung: $ U \cup W = V $ und $ U \cap W = \emptyset $ \\
 \\
-Baum mit $i$ inneren Knoten: $n=m \cdot i + 1$ Knoten
-\\
-$m$-facher Baum der Höhe $h$: höchstens $m^h$ Blätter.
+1. keine Kante zwischen Knoten aus $U$ \\
+2. keine Kante zwischen Knoten aus $W$ \\
+3. Knoten aus sind genau durch eine Kante verbunden \\
+4. $\forall u \in U$, $u$ ist mit jedem Knoten aus $W$ verbunden \\
+5. $\forall w \in W$, $w$ ist mit jedem Knoten aus $U$ verbunden
 
 \subsection{Page-Rank-Algorithmus}
-
-Gewicht der Seite $PR_i$ in einem Netz mit $N$ Seiten, Dämpfungsfaktor $d$ ($[0;1]$), $C_j$ von Seite $j$ abgehende Links:
+Gewicht der Seite $PR_i$ in einem Netz mit $N$ Seiten \\
+Dämpfungsfaktor $d$ mit $0 \leq d \leq 1 $ \\
+$C_j$ von Seite $j$ abgehende Links \\
 \\
-$PR_i = {{1-d}\over{n}} + d \cdot \sum_{j} {{PR_j}\over{C_j}}$
+$PR_i = \frac{1-d}{N} + d \cdot \sum_{j} {{PR_j}\over{C_j}}$
 
 \subsection{Matrizen}
-
-$n$ Ecken, $m$ Kanten
-
-\begin{itemize}
-\item{Adjazenzmatrix $A(G)$: $n \times n$-Matrix (Knoten/Knoten) mit Anzahl Kanten zwischen den Ecken.}
-\item{Inzidenzmatrix $B(G)$: $n \times m$-Matrix (Knoten/Kanten) mit $1$ (Knoten liegt auf Kante) oder $0$ (Knoten \textit{nicht} auf Kante)}
-\item{Gradmatrix $D(G)$: $n \times n$-Diagonal-Matrix (Knoten/Knoten), Grade der Knoten auf der Diagonalen}
-\end{itemize}
+\begin{tabular}{@{}lll}
+    $n$ Ecken, $m$ Kanten \\
+    \\
+    \textbf{Adjazenzmatrix} & $A(G)$ & $n \times n$ - Matrix \\
+    \multicolumn{3}{@{}l}{\textit{mit Anzahl Kanten zwischen den Ecken}} \\
+    \\
+    \textbf{Inzidenzmatrix} & $B(G)$ & $n \times m$ - Matrix \\ 
+    \multicolumn{3}{@{}l}{\textit{Ecke liegt auf Kante (0 oder 1)}} \\
+    \\
+    \textbf{Gradmatrix} & $D(G)$ & $n \times n$ - Diagonal-Matrix \\
+    \multicolumn{3}{@{}l}{\textit{Grade der Knoten auf der Diagonalen}} \\
+\end{tabular}
 
 \subsection{Wege und Kreise}
 
-Anzahl Wege der Länge $l$ von Knoten $i$ zu $j$: Eintrag $(i,j)$ von $A(G)^l$ (Adjazenzmatrix hoch $l$)
+Anzahl Wege der Länge $l$ von Knoten $i$ zu $j$ \\
+Eintrag $(i,j)$ von $A(G)^l$ \textit{(Adjazenzmatrix hoch $l$)} \\
 
-\begin{itemize}
-\item{Weg: Folge von Kanten $e_1={a,b},e_2={b,c},\dots$}
-\item{Kreis: Weg mit übereinstimmendem Anfangs- und Endpunkt (Länge $>0$)}
-\item{einfacher Kreis: jede Kante kommt höchstens einmal vor}
-\item{Eulerweg: Weg, der jede Kante einmal durchläuft}
-\item{Eulerkreis: Kreis, der jede Kante einmal durchläuft}
-\item{Hamiltonweg: Weg, der jeden Knoten einmal durchläuft}
-\item{Hamiltonkreis: Kreis, der jeden Knoten einmal durchläuft}
-\item{Satz von Dirac: ein Graph mit $n \geq 3$ Knoten mit Grad $\geq n/2$ hat einen Hamiltonkreis.}
-\item{Satz von Ore: ein Graph mit $n \geq 3$ mit ${deg}(v)+{deg(u) \geq n}$ für jedes Paar $u,v$ von nicht benachbarten Ecken hat einen Hamiltonkreis.}
-\end{itemize}
+\begin{tabular}{@{}ll}
+    Weg & Folge von Kanten \\
+    Kreis & gleicher Anfangs- und Endpunkt \\
+    einfacher Kreis & jede Kante höchstens einmal \\
+    Eulerweg & jede Kante genau einmal \\
+    Eulerkreis & jede Kante genau einmal \\
+    Hamiltonweg & jeden Knoten genau einmal \\
+    Hamiltonkreis & jeden Knoten genau einmal \\
+\end{tabular} \\
+
+\textit{Satz von Dirac} \\
+ein Graph mit $n \geq 3$ Knoten mit Grad $\geq n/2$ hat einen Hamiltonkreis \\
+\\
+\textit{Satz von Ore} \\ 
+ein Graph mit $n \geq 3$ mit ${deg}(v)+{deg(u) \geq n}$ für jedes Paar $u,v$ von nicht benachbarten Ecken hat einen Hamiltonkreis
